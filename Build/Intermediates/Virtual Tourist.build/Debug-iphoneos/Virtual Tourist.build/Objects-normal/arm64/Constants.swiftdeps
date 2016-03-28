@@ -1,0 +1,127 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "Constants"
+provides-nominal:
+- "C15Virtual_Tourist9Constants"
+- "VC15Virtual_Tourist9Constants6Flickr"
+- "VC15Virtual_Tourist9Constants19FlickrParameterKeys"
+- "VC15Virtual_Tourist9Constants21FlickrParameterValues"
+- "VC15Virtual_Tourist9Constants18FlickrResponseKeys"
+- "VC15Virtual_Tourist9Constants20FlickrResponseValues"
+- "VC15Virtual_Tourist9Constants8JSONKeys"
+- "VC15Virtual_Tourist9Constants13Notifications"
+provides-member:
+- ["C15Virtual_Tourist9Constants", ""]
+- ["VC15Virtual_Tourist9Constants6Flickr", ""]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", ""]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", ""]
+- ["VC15Virtual_Tourist9Constants18FlickrResponseKeys", ""]
+- ["VC15Virtual_Tourist9Constants20FlickrResponseValues", ""]
+- ["VC15Virtual_Tourist9Constants8JSONKeys", ""]
+- ["VC15Virtual_Tourist9Constants13Notifications", ""]
+provides-dynamic-lookup:
+depends-top-level:
+- "Constants"
+- "UnicodeScalarType"
+- "NSObject"
+- "StringLiteralType"
+depends-member:
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", ""]
+- ["C15Virtual_Tourist9Constants", "Flickr"]
+- ["C15Virtual_Tourist9Constants", "FlickrParameterKeys"]
+- ["C15Virtual_Tourist9Constants", "FlickrParameterValues"]
+- ["C15Virtual_Tourist9Constants", "FlickrResponseKeys"]
+- ["C15Virtual_Tourist9Constants", "FlickrResponseValues"]
+- ["C15Virtual_Tourist9Constants", "JSONKeys"]
+- ["C15Virtual_Tourist9Constants", "Notifications"]
+- ["C15Virtual_Tourist9Constants", "deinit"]
+- ["C15Virtual_Tourist9Constants", "init"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", ""]
+- ["VC15Virtual_Tourist9Constants6Flickr", "APIHost"]
+- ["VC15Virtual_Tourist9Constants6Flickr", "APIPath"]
+- ["VC15Virtual_Tourist9Constants6Flickr", "APIScheme"]
+- ["VC15Virtual_Tourist9Constants6Flickr", "SearchBBoxHalfHeight"]
+- ["VC15Virtual_Tourist9Constants6Flickr", "SearchBBoxHalfWidth"]
+- ["VC15Virtual_Tourist9Constants6Flickr", "SearchLatRange"]
+- ["VC15Virtual_Tourist9Constants6Flickr", "SearchLonRange"]
+- ["VC15Virtual_Tourist9Constants6Flickr", "init"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "APIKey"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "BoundingBox"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "Extras"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "Format"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "GalleryID"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "Method"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "NoJSONCallback"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "Page"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "Per_Page"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "SafeSearch"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "Text"]
+- ["VC15Virtual_Tourist9Constants19FlickrParameterKeys", "init"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "APIKey"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "DisableJSONCallback"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "GalleryID"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "GalleryPhotosMethod"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "MAX_PER_PAGE"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "MediumURL"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "ResponseFormat"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "SearchMethod"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "UseSafeSearch"]
+- ["VC15Virtual_Tourist9Constants21FlickrParameterValues", "init"]
+- ["VC15Virtual_Tourist9Constants18FlickrResponseKeys", "MediumURL"]
+- ["VC15Virtual_Tourist9Constants18FlickrResponseKeys", "Pages"]
+- ["VC15Virtual_Tourist9Constants18FlickrResponseKeys", "Photo"]
+- ["VC15Virtual_Tourist9Constants18FlickrResponseKeys", "Photos"]
+- ["VC15Virtual_Tourist9Constants18FlickrResponseKeys", "Status"]
+- ["VC15Virtual_Tourist9Constants18FlickrResponseKeys", "Title"]
+- ["VC15Virtual_Tourist9Constants18FlickrResponseKeys", "Total"]
+- ["VC15Virtual_Tourist9Constants18FlickrResponseKeys", "init"]
+- ["VC15Virtual_Tourist9Constants20FlickrResponseValues", "OKStatus"]
+- ["VC15Virtual_Tourist9Constants20FlickrResponseValues", "init"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", ""]
+- ["VC15Virtual_Tourist9Constants8JSONKeys", "File"]
+- ["VC15Virtual_Tourist9Constants8JSONKeys", "OBJECT_ID_KEY"]
+- ["VC15Virtual_Tourist9Constants8JSONKeys", "URL"]
+- ["VC15Virtual_Tourist9Constants8JSONKeys", "init"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", ""]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", ""]
+- ["VC15Virtual_Tourist9Constants13Notifications", "ALL_PHOTO_LOADED_NOTIFICATION"]
+- ["VC15Virtual_Tourist9Constants13Notifications", "PHOTO_LOADED_NOTIFICATION"]
+- ["VC15Virtual_Tourist9Constants13Notifications", "init"]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "C15Virtual_Tourist9Constants"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "VC15Virtual_Tourist9Constants6Flickr"
+- "VC15Virtual_Tourist9Constants19FlickrParameterKeys"
+- "VC15Virtual_Tourist9Constants21FlickrParameterValues"
+- "VC15Virtual_Tourist9Constants18FlickrResponseKeys"
+- "VC15Virtual_Tourist9Constants20FlickrResponseValues"
+- "PSs8Hashable"
+- "VC15Virtual_Tourist9Constants8JSONKeys"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- "VC15Virtual_Tourist9Constants13Notifications"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+interface-hash: "d1e46a28a5e496cc6ca60ec681f6ee96"

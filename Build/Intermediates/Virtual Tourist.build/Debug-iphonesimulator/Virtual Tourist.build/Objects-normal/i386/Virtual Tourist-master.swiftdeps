@@ -1,0 +1,15 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "fbf2fb43e52a0762a69d8fb86a56a616"
+build_time: [511929635, 517387000]
+inputs:
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/PhotoAlbumViewController.swift": [511928637, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/MapVIewController.swift": [511929581, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Photo.swift": [511405765, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Pin+CoreDataProperties.swift": [511319957, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/AppDelegate.swift": [508550064, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Constants.swift": [511405704, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/VirtualTouristClient.swift": [511928902, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Photo+CoreDataProperties.swift": [508351086, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Pin.swift": [511929326, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/CoreDataStackManager.swift": [508550030, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/PhotoCell.swift": [508552874, 0]

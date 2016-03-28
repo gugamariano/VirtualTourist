@@ -1,0 +1,213 @@
+### Swift dependencies file v0 ###
+provides-top-level:
+- "PhotoCell"
+provides-nominal:
+- "C15Virtual_Tourist9PhotoCell"
+provides-member:
+- ["C15Virtual_Tourist9PhotoCell", ""]
+provides-dynamic-lookup:
+- "activityIndicator"
+- "photo"
+- "taskToCancelifCellIsReused"
+depends-top-level:
+- !private "StringLiteralType"
+- "UICollectionViewCell"
+- "UIImageView"
+- "PhotoCell"
+- "NSURLSessionTask"
+- !private "print"
+- "UIActivityIndicatorView"
+depends-member:
+- ["PSs9AnyObject", "activityIndicator"]
+- !private ["PSs9AnyObject", "cancel"]
+- ["PSs9AnyObject", "init"]
+- ["PSs9AnyObject", "photo"]
+- !private ["PSs9AnyObject", "print"]
+- ["PSs9AnyObject", "taskToCancelifCellIsReused"]
+- ["PSs9AnyObject", ""]
+- ["PSs11CVarArgType", "activityIndicator"]
+- !private ["PSs11CVarArgType", "cancel"]
+- ["PSs11CVarArgType", "init"]
+- ["PSs11CVarArgType", "photo"]
+- !private ["PSs11CVarArgType", "print"]
+- ["PSs11CVarArgType", "taskToCancelifCellIsReused"]
+- ["PSs11CVarArgType", ""]
+- ["PSs28CustomDebugStringConvertible", "Some"]
+- ["PSs23CustomStringConvertible", "activityIndicator"]
+- !private ["PSs23CustomStringConvertible", "cancel"]
+- ["PSs23CustomStringConvertible", "init"]
+- ["PSs23CustomStringConvertible", "photo"]
+- !private ["PSs23CustomStringConvertible", "print"]
+- ["PSs23CustomStringConvertible", "taskToCancelifCellIsReused"]
+- ["PSs23CustomStringConvertible", ""]
+- ["PSs9Equatable", "activityIndicator"]
+- !private ["PSs9Equatable", "cancel"]
+- ["PSs9Equatable", "init"]
+- ["PSs9Equatable", "photo"]
+- !private ["PSs9Equatable", "print"]
+- ["PSs9Equatable", "taskToCancelifCellIsReused"]
+- ["PSs9Equatable", ""]
+- ["PSs8Hashable", "activityIndicator"]
+- !private ["PSs8Hashable", "cancel"]
+- ["PSs8Hashable", "init"]
+- ["PSs8Hashable", "photo"]
+- !private ["PSs8Hashable", "print"]
+- ["PSs8Hashable", "taskToCancelifCellIsReused"]
+- ["PSs8Hashable", ""]
+- ["PSo8NSCoding", "activityIndicator"]
+- ["PSo8NSCoding", "init"]
+- ["PSo8NSCoding", "photo"]
+- !private ["PSo8NSCoding", "print"]
+- ["PSo8NSCoding", "taskToCancelifCellIsReused"]
+- ["PSo8NSCoding", ""]
+- !private ["PSo9NSCopying", "cancel"]
+- ["CSo8NSObject", "NSURLSessionTask"]
+- ["CSo8NSObject", "UIActivityIndicatorView"]
+- ["CSo8NSObject", "UIImageView"]
+- ["CSo8NSObject", "activityIndicator"]
+- !private ["CSo8NSObject", "cancel"]
+- ["CSo8NSObject", "init"]
+- ["CSo8NSObject", "photo"]
+- !private ["CSo8NSObject", "print"]
+- ["CSo8NSObject", "taskToCancelifCellIsReused"]
+- ["PSo16NSObjectProtocol", "activityIndicator"]
+- !private ["PSo16NSObjectProtocol", "cancel"]
+- ["PSo16NSObjectProtocol", "init"]
+- ["PSo16NSObjectProtocol", "photo"]
+- !private ["PSo16NSObjectProtocol", "print"]
+- ["PSo16NSObjectProtocol", "taskToCancelifCellIsReused"]
+- ["PSo16NSObjectProtocol", ""]
+- !private ["CSo16NSURLSessionTask", "cancel"]
+- ["PSs21NilLiteralConvertible", "Some"]
+- ["Sq", "Some"]
+- ["C15Virtual_Tourist9PhotoCell", "NSURLSessionTask"]
+- ["C15Virtual_Tourist9PhotoCell", "UIActivityIndicatorView"]
+- ["C15Virtual_Tourist9PhotoCell", "UIImageView"]
+- ["C15Virtual_Tourist9PhotoCell", "activityIndicator"]
+- ["C15Virtual_Tourist9PhotoCell", "deinit"]
+- ["C15Virtual_Tourist9PhotoCell", "init"]
+- ["C15Virtual_Tourist9PhotoCell", "photo"]
+- !private ["C15Virtual_Tourist9PhotoCell", "print"]
+- ["C15Virtual_Tourist9PhotoCell", "taskToCancelifCellIsReused"]
+- ["PSo29UIAccessibilityIdentification", "activityIndicator"]
+- ["PSo29UIAccessibilityIdentification", "init"]
+- ["PSo29UIAccessibilityIdentification", "photo"]
+- !private ["PSo29UIAccessibilityIdentification", "print"]
+- ["PSo29UIAccessibilityIdentification", "taskToCancelifCellIsReused"]
+- ["PSo29UIAccessibilityIdentification", ""]
+- ["PSo12UIAppearance", "activityIndicator"]
+- ["PSo12UIAppearance", "init"]
+- ["PSo12UIAppearance", "photo"]
+- !private ["PSo12UIAppearance", "print"]
+- ["PSo12UIAppearance", "taskToCancelifCellIsReused"]
+- ["PSo12UIAppearance", ""]
+- ["PSo21UIAppearanceContainer", "activityIndicator"]
+- ["PSo21UIAppearanceContainer", "init"]
+- ["PSo21UIAppearanceContainer", "photo"]
+- !private ["PSo21UIAppearanceContainer", "print"]
+- ["PSo21UIAppearanceContainer", "taskToCancelifCellIsReused"]
+- ["PSo21UIAppearanceContainer", ""]
+- ["CSo24UICollectionReusableView", "NSURLSessionTask"]
+- ["CSo24UICollectionReusableView", "UIActivityIndicatorView"]
+- ["CSo24UICollectionReusableView", "UIImageView"]
+- ["CSo24UICollectionReusableView", "activityIndicator"]
+- ["CSo24UICollectionReusableView", "init"]
+- ["CSo24UICollectionReusableView", "photo"]
+- !private ["CSo24UICollectionReusableView", "print"]
+- ["CSo24UICollectionReusableView", "taskToCancelifCellIsReused"]
+- ["CSo20UICollectionViewCell", "NSURLSessionTask"]
+- ["CSo20UICollectionViewCell", "UIActivityIndicatorView"]
+- ["CSo20UICollectionViewCell", "UIImageView"]
+- ["CSo20UICollectionViewCell", "activityIndicator"]
+- ["CSo20UICollectionViewCell", "init"]
+- ["CSo20UICollectionViewCell", "photo"]
+- !private ["CSo20UICollectionViewCell", "print"]
+- ["CSo20UICollectionViewCell", "taskToCancelifCellIsReused"]
+- ["CSo20UICollectionViewCell", ""]
+- ["PSo17UICoordinateSpace", "activityIndicator"]
+- ["PSo17UICoordinateSpace", "init"]
+- ["PSo17UICoordinateSpace", "photo"]
+- !private ["PSo17UICoordinateSpace", "print"]
+- ["PSo17UICoordinateSpace", "taskToCancelifCellIsReused"]
+- ["PSo17UICoordinateSpace", ""]
+- ["PSo13UIDynamicItem", "activityIndicator"]
+- ["PSo13UIDynamicItem", "init"]
+- ["PSo13UIDynamicItem", "photo"]
+- !private ["PSo13UIDynamicItem", "print"]
+- ["PSo13UIDynamicItem", "taskToCancelifCellIsReused"]
+- ["PSo13UIDynamicItem", ""]
+- ["PSo18UIFocusEnvironment", "activityIndicator"]
+- ["PSo18UIFocusEnvironment", "init"]
+- ["PSo18UIFocusEnvironment", "photo"]
+- !private ["PSo18UIFocusEnvironment", "print"]
+- ["PSo18UIFocusEnvironment", "taskToCancelifCellIsReused"]
+- ["PSo18UIFocusEnvironment", ""]
+- ["CSo11UIResponder", "NSURLSessionTask"]
+- ["CSo11UIResponder", "UIActivityIndicatorView"]
+- ["CSo11UIResponder", "UIImageView"]
+- ["CSo11UIResponder", "activityIndicator"]
+- ["CSo11UIResponder", "init"]
+- ["CSo11UIResponder", "photo"]
+- !private ["CSo11UIResponder", "print"]
+- ["CSo11UIResponder", "taskToCancelifCellIsReused"]
+- ["PSo18UITraitEnvironment", "activityIndicator"]
+- ["PSo18UITraitEnvironment", "init"]
+- ["PSo18UITraitEnvironment", "photo"]
+- !private ["PSo18UITraitEnvironment", "print"]
+- ["PSo18UITraitEnvironment", "taskToCancelifCellIsReused"]
+- ["PSo18UITraitEnvironment", ""]
+- ["CSo6UIView", "NSURLSessionTask"]
+- ["CSo6UIView", "UIActivityIndicatorView"]
+- ["CSo6UIView", "UIImageView"]
+- ["CSo6UIView", "activityIndicator"]
+- ["CSo6UIView", "init"]
+- ["CSo6UIView", "photo"]
+- !private ["CSo6UIView", "print"]
+- ["CSo6UIView", "taskToCancelifCellIsReused"]
+- ["PSs12_Reflectable", "Some"]
+- ["PSs12_Reflectable", "activityIndicator"]
+- ["PSs12_Reflectable", "init"]
+- ["PSs12_Reflectable", "photo"]
+- !private ["PSs12_Reflectable", "print"]
+- ["PSs12_Reflectable", "taskToCancelifCellIsReused"]
+- ["PSs12_Reflectable", ""]
+depends-nominal:
+- "PSs9AnyObject"
+- "PSs11CVarArgType"
+- "PSs28CustomDebugStringConvertible"
+- "PSs23CustomStringConvertible"
+- "PSs9Equatable"
+- "PSs8Hashable"
+- "PSo8NSCoding"
+- !private "PSo9NSCopying"
+- "CSo8NSObject"
+- "PSo16NSObjectProtocol"
+- !private "CSo16NSURLSessionTask"
+- "PSs21NilLiteralConvertible"
+- "Sq"
+- "C15Virtual_Tourist9PhotoCell"
+- "PSo29UIAccessibilityIdentification"
+- "PSo12UIAppearance"
+- "PSo21UIAppearanceContainer"
+- "CSo24UICollectionReusableView"
+- "CSo20UICollectionViewCell"
+- "PSo17UICoordinateSpace"
+- "PSo13UIDynamicItem"
+- "PSo18UIFocusEnvironment"
+- "CSo11UIResponder"
+- "PSo18UITraitEnvironment"
+- "CSo6UIView"
+- "PSs12_Reflectable"
+depends-dynamic-lookup:
+depends-external:
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Swift.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/UIKit.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Foundation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Darwin.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/Dispatch.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/ObjectiveC.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreGraphics.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreImage.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreLocation.swiftmodule"
+- "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/arm64/CoreData.swiftmodule"
+interface-hash: "c8f54a6a94d2ab6407e749ea760087cd"
