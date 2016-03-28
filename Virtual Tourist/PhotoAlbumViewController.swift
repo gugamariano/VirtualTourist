@@ -43,12 +43,14 @@ class PhotoAlbumViewController: UIViewController, UICollectionViewDataSource, UI
     
     @IBAction func newCollectionAction(sender: AnyObject) {
         
-        
-        self.pin.deletePhotos()
-        
-        pin.searchPhotos(true) { (numberFound) -> Void in
-            self.showOrHideLabel()
-            
+        dispatch_async(dispatch_get_main_queue()) {
+            self.newCollectionBtn.enabled=false
+
+            self.pin.deletePhotos()
+            self.pin.searchPhotos(true) { (numberFound) -> Void in
+                self.showOrHideLabel()
+                
+            }
         }
         
         
@@ -86,7 +88,14 @@ class PhotoAlbumViewController: UIViewController, UICollectionViewDataSource, UI
     
     func showOrHideLabel(){
         let count = fetchedResultsController.fetchedObjects?.count
-        
+
+        if ( count > 0){
+            noImagesLabel.hidden=true
+            
+        }else{
+            noImagesLabel.hidden=false
+        }
+
         totalLoaded=0
         
         for photo in pin.photos!  {
@@ -97,18 +106,12 @@ class PhotoAlbumViewController: UIViewController, UICollectionViewDataSource, UI
         
         
         if(totalLoaded == count ) {
-            newCollectionBtn.hidden=false
+            newCollectionBtn.enabled=true
         }else{
-            newCollectionBtn.hidden=true
+            newCollectionBtn.enabled=false
         }
         
-        if ( count > 0){
-            noImagesLabel.hidden=true
-            
-        }else{
-            noImagesLabel.hidden=false
-        }
-    
+        
     }
     
     
@@ -131,14 +134,7 @@ class PhotoAlbumViewController: UIViewController, UICollectionViewDataSource, UI
     }()
 
     
-    
-    func didLoadAllPhotos(sender: AnyObject) {
-        
-        dispatch_async(dispatch_get_main_queue()) {
-            //self.collectionLabel.hidden = true
-            //self.newCollectionButton.enabled = true
-        }
-    }
+
     
     // Each photo posts a notificaation when it is loaded
     func didLoadPhoto(photo: Photo) {
