@@ -6,17 +6,17 @@ provides-nominal:
 provides-member:
 - ["C15Virtual_Tourist9PhotoCell", ""]
 provides-dynamic-lookup:
+- "photo"
 - "activityIndicator"
 - "taskToCancelifCellIsReused"
-- "photo"
 depends-top-level:
-- "UICollectionViewCell"
-- !private "print"
 - !private "StringLiteralType"
-- "UIImageView"
-- "NSURLSessionTask"
+- "UICollectionViewCell"
 - "UIActivityIndicatorView"
+- "NSURLSessionTask"
 - "PhotoCell"
+- "UIImageView"
+- !private "print"
 depends-member:
 - ["PSs9AnyObject", "activityIndicator"]
 - !private ["PSs9AnyObject", "cancel"]

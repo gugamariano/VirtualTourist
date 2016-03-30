@@ -11,9 +11,9 @@ provides-dynamic-lookup:
 - "url"
 - "pin"
 depends-top-level:
+- "Photo"
 - "String"
 - "Pin"
-- "Photo"
 depends-member:
 - ["PSs9AnyObject", "file"]
 - ["PSs9AnyObject", "pin"]

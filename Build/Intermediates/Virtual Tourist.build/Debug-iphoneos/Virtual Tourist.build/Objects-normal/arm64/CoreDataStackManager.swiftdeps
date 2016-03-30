@@ -7,24 +7,24 @@ provides-member:
 - ["C15Virtual_Tourist20CoreDataStackManager", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSUnderlyingErrorKey"
+- !private "NSFileManager"
+- "NSManagedObjectContext"
 - !private "NSSQLiteStoreType"
 - !private "String"
 - "NSURL"
-- !private "-"
-- !private "NSLog"
-- "NSManagedObjectContext"
-- "StringLiteralType"
-- "NSPersistentStoreCoordinator"
-- !private "NSLocalizedFailureReasonErrorKey"
-- !private "NSFileManager"
-- !private "NSBundle"
-- !private "NSError"
-- !private "NSLocalizedDescriptionKey"
-- !private "abort"
-- "CoreDataStackManager"
-- !private "AnyObject"
 - "NSManagedObjectModel"
+- "StringLiteralType"
+- !private "AnyObject"
+- !private "NSLocalizedFailureReasonErrorKey"
+- !private "NSBundle"
+- !private "NSLog"
+- !private "-"
+- !private "NSLocalizedDescriptionKey"
+- !private "NSError"
+- "CoreDataStackManager"
+- !private "abort"
+- !private "NSUnderlyingErrorKey"
+- "NSPersistentStoreCoordinator"
 depends-member:
 - !private ["PSs9AnyObject", "AnyObject"]
 - !private ["PSs9AnyObject", "CoreDataStackManager"]

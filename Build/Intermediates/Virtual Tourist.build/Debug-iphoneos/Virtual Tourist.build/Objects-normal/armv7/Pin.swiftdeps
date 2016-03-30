@@ -6,31 +6,36 @@ provides-nominal:
 provides-member:
 - ["C15Virtual_Tourist3Pin", ""]
 provides-dynamic-lookup:
-- "coordinate"
 - "searchPhotos"
+- "coordinate"
+- "setCoordinate"
 - "deletePhotos"
 depends-top-level:
-- !private "print"
-- "Int"
-- !private "++"
 - !private "NSNumber"
-- "AnyObject"
-- "NSManagedObject"
-- !private "Double"
-- !private "StringLiteralType"
-- !private "VirtualTouristClient"
-- "Bool"
+- "Int"
+- "Void"
 - "Dictionary"
-- !private "Photo"
-- "NSManagedObjectContext"
+- "String"
+- !private "dispatch_get_global_queue"
+- "NSEntityDescription"
+- "Bool"
+- !private "print"
+- !private "BooleanLiteralType"
+- !private "QOS_CLASS_BACKGROUND"
 - !private "CLLocationCoordinate2DMake"
 - "Pin"
-- "NSEntityDescription"
-- "CLLocationCoordinate2D"
+- !private "Photo"
+- !private "VirtualTouristClient"
+- !private "StringLiteralType"
+- "NSManagedObjectContext"
+- !private "Double"
+- !private "++"
+- !private "dispatch_async"
+- !private "dispatch_get_main_queue"
 - "MKAnnotation"
-- "String"
-- !private "BooleanLiteralType"
-- "Void"
+- "AnyObject"
+- "NSManagedObject"
+- "CLLocationCoordinate2D"
 depends-member:
 - !private ["PSs9AnyObject", "CLLocationCoordinate2D"]
 - !private ["PSs9AnyObject", "CLLocationCoordinate2DMake"]
@@ -38,11 +43,15 @@ depends-member:
 - !private ["PSs9AnyObject", "Generator"]
 - !private ["PSs9AnyObject", "NSEntityDescription"]
 - !private ["PSs9AnyObject", "Photo"]
+- !private ["PSs9AnyObject", "QOS_CLASS_BACKGROUND"]
 - !private ["PSs9AnyObject", "VirtualTouristClient"]
 - ["PSs9AnyObject", "coordinate"]
 - !private ["PSs9AnyObject", "count"]
 - !private ["PSs9AnyObject", "deletePhoto"]
 - ["PSs9AnyObject", "deletePhotos"]
+- !private ["PSs9AnyObject", "dispatch_async"]
+- !private ["PSs9AnyObject", "dispatch_get_global_queue"]
+- !private ["PSs9AnyObject", "dispatch_get_main_queue"]
 - !private ["PSs9AnyObject", "entityForName"]
 - ["PSs9AnyObject", "init"]
 - !private ["PSs9AnyObject", "integerValue"]
@@ -56,6 +65,7 @@ depends-member:
 - !private ["PSs9AnyObject", "save"]
 - !private ["PSs9AnyObject", "searchByLatLon"]
 - ["PSs9AnyObject", "searchPhotos"]
+- ["PSs9AnyObject", "setCoordinate"]
 - !private ["PSs9AnyObject", "sharedInstance"]
 - !private ["PSs9AnyObject", "subscript"]
 - ["PSs9AnyObject", "subtitle"]
@@ -82,6 +92,8 @@ depends-member:
 - !private ["PSs25BooleanLiteralConvertible", "integerValue"]
 - !private ["PSs11BooleanType", "_getBuiltinLogicValue"]
 - !private ["VSC22CLLocationCoordinate2D", "init"]
+- !private ["VSC22CLLocationCoordinate2D", "latitude"]
+- !private ["VSC22CLLocationCoordinate2D", "longitude"]
 - !private ["PSs11CVarArgType", "CLLocationCoordinate2D"]
 - !private ["PSs11CVarArgType", "CLLocationCoordinate2DMake"]
 - !private ["PSs11CVarArgType", "Distance"]
@@ -89,11 +101,15 @@ depends-member:
 - !private ["PSs11CVarArgType", "IntegerLiteralType"]
 - !private ["PSs11CVarArgType", "NSEntityDescription"]
 - !private ["PSs11CVarArgType", "Photo"]
+- !private ["PSs11CVarArgType", "QOS_CLASS_BACKGROUND"]
 - !private ["PSs11CVarArgType", "VirtualTouristClient"]
 - ["PSs11CVarArgType", "coordinate"]
 - !private ["PSs11CVarArgType", "count"]
 - !private ["PSs11CVarArgType", "deletePhoto"]
 - ["PSs11CVarArgType", "deletePhotos"]
+- !private ["PSs11CVarArgType", "dispatch_async"]
+- !private ["PSs11CVarArgType", "dispatch_get_global_queue"]
+- !private ["PSs11CVarArgType", "dispatch_get_main_queue"]
 - !private ["PSs11CVarArgType", "entityForName"]
 - ["PSs11CVarArgType", "init"]
 - !private ["PSs11CVarArgType", "integerValue"]
@@ -107,6 +123,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "save"]
 - !private ["PSs11CVarArgType", "searchByLatLon"]
 - ["PSs11CVarArgType", "searchPhotos"]
+- ["PSs11CVarArgType", "setCoordinate"]
 - !private ["PSs11CVarArgType", "sharedInstance"]
 - !private ["PSs11CVarArgType", "subscript"]
 - ["PSs11CVarArgType", "subtitle"]
@@ -141,6 +158,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "Key"]
 - !private ["PSs23CustomStringConvertible", "NSEntityDescription"]
 - !private ["PSs23CustomStringConvertible", "Photo"]
+- !private ["PSs23CustomStringConvertible", "QOS_CLASS_BACKGROUND"]
 - !private ["PSs23CustomStringConvertible", "SubSequence"]
 - !private ["PSs23CustomStringConvertible", "Value"]
 - !private ["PSs23CustomStringConvertible", "VirtualTouristClient"]
@@ -150,6 +168,9 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "count"]
 - !private ["PSs23CustomStringConvertible", "deletePhoto"]
 - ["PSs23CustomStringConvertible", "deletePhotos"]
+- !private ["PSs23CustomStringConvertible", "dispatch_async"]
+- !private ["PSs23CustomStringConvertible", "dispatch_get_global_queue"]
+- !private ["PSs23CustomStringConvertible", "dispatch_get_main_queue"]
 - !private ["PSs23CustomStringConvertible", "entityForName"]
 - ["PSs23CustomStringConvertible", "init"]
 - !private ["PSs23CustomStringConvertible", "integerValue"]
@@ -163,6 +184,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "save"]
 - !private ["PSs23CustomStringConvertible", "searchByLatLon"]
 - ["PSs23CustomStringConvertible", "searchPhotos"]
+- ["PSs23CustomStringConvertible", "setCoordinate"]
 - !private ["PSs23CustomStringConvertible", "sharedInstance"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
 - ["PSs23CustomStringConvertible", "subtitle"]
@@ -185,12 +207,16 @@ depends-member:
 - !private ["PSs9Equatable", "IntegerLiteralType"]
 - !private ["PSs9Equatable", "NSEntityDescription"]
 - !private ["PSs9Equatable", "Photo"]
+- !private ["PSs9Equatable", "QOS_CLASS_BACKGROUND"]
 - !private ["PSs9Equatable", "VirtualTouristClient"]
 - !private ["PSs9Equatable", "_getBuiltinLogicValue"]
 - ["PSs9Equatable", "coordinate"]
 - !private ["PSs9Equatable", "count"]
 - !private ["PSs9Equatable", "deletePhoto"]
 - ["PSs9Equatable", "deletePhotos"]
+- !private ["PSs9Equatable", "dispatch_async"]
+- !private ["PSs9Equatable", "dispatch_get_global_queue"]
+- !private ["PSs9Equatable", "dispatch_get_main_queue"]
 - !private ["PSs9Equatable", "entityForName"]
 - ["PSs9Equatable", "init"]
 - !private ["PSs9Equatable", "integerValue"]
@@ -204,6 +230,7 @@ depends-member:
 - !private ["PSs9Equatable", "save"]
 - !private ["PSs9Equatable", "searchByLatLon"]
 - ["PSs9Equatable", "searchPhotos"]
+- ["PSs9Equatable", "setCoordinate"]
 - !private ["PSs9Equatable", "sharedInstance"]
 - !private ["PSs9Equatable", "subscript"]
 - ["PSs9Equatable", "subtitle"]
@@ -222,12 +249,16 @@ depends-member:
 - !private ["PSs8Hashable", "IntegerLiteralType"]
 - !private ["PSs8Hashable", "NSEntityDescription"]
 - !private ["PSs8Hashable", "Photo"]
+- !private ["PSs8Hashable", "QOS_CLASS_BACKGROUND"]
 - !private ["PSs8Hashable", "VirtualTouristClient"]
 - !private ["PSs8Hashable", "_getBuiltinLogicValue"]
 - ["PSs8Hashable", "coordinate"]
 - !private ["PSs8Hashable", "count"]
 - !private ["PSs8Hashable", "deletePhoto"]
 - ["PSs8Hashable", "deletePhotos"]
+- !private ["PSs8Hashable", "dispatch_async"]
+- !private ["PSs8Hashable", "dispatch_get_global_queue"]
+- !private ["PSs8Hashable", "dispatch_get_main_queue"]
 - !private ["PSs8Hashable", "entityForName"]
 - ["PSs8Hashable", "init"]
 - !private ["PSs8Hashable", "integerValue"]
@@ -241,6 +272,7 @@ depends-member:
 - !private ["PSs8Hashable", "save"]
 - !private ["PSs8Hashable", "searchByLatLon"]
 - ["PSs8Hashable", "searchPhotos"]
+- ["PSs8Hashable", "setCoordinate"]
 - !private ["PSs8Hashable", "sharedInstance"]
 - !private ["PSs8Hashable", "subscript"]
 - ["PSs8Hashable", "subtitle"]
@@ -273,8 +305,12 @@ depends-member:
 - !private ["PSo12MKAnnotation", "CLLocationCoordinate2DMake"]
 - !private ["PSo12MKAnnotation", "NSEntityDescription"]
 - !private ["PSo12MKAnnotation", "Photo"]
+- !private ["PSo12MKAnnotation", "QOS_CLASS_BACKGROUND"]
 - !private ["PSo12MKAnnotation", "VirtualTouristClient"]
 - ["PSo12MKAnnotation", "coordinate"]
+- !private ["PSo12MKAnnotation", "dispatch_async"]
+- !private ["PSo12MKAnnotation", "dispatch_get_global_queue"]
+- !private ["PSo12MKAnnotation", "dispatch_get_main_queue"]
 - !private ["PSo12MKAnnotation", "latitude"]
 - !private ["PSo12MKAnnotation", "longitude"]
 - !private ["PSo12MKAnnotation", "managedObjectContext"]
@@ -331,12 +367,16 @@ depends-member:
 - ["CSo15NSManagedObject", "NSManagedObjectContext"]
 - !private ["CSo15NSManagedObject", "NSNumber"]
 - !private ["CSo15NSManagedObject", "Photo"]
+- !private ["CSo15NSManagedObject", "QOS_CLASS_BACKGROUND"]
 - ["CSo15NSManagedObject", "String"]
 - !private ["CSo15NSManagedObject", "VirtualTouristClient"]
 - ["CSo15NSManagedObject", "Void"]
 - ["CSo15NSManagedObject", "coordinate"]
 - !private ["CSo15NSManagedObject", "deletePhoto"]
 - ["CSo15NSManagedObject", "deletePhotos"]
+- !private ["CSo15NSManagedObject", "dispatch_async"]
+- !private ["CSo15NSManagedObject", "dispatch_get_global_queue"]
+- !private ["CSo15NSManagedObject", "dispatch_get_main_queue"]
 - ["CSo15NSManagedObject", "init"]
 - !private ["CSo15NSManagedObject", "latitude"]
 - !private ["CSo15NSManagedObject", "longitude"]
@@ -346,6 +386,7 @@ depends-member:
 - !private ["CSo15NSManagedObject", "pin"]
 - !private ["CSo15NSManagedObject", "print"]
 - ["CSo15NSManagedObject", "searchPhotos"]
+- ["CSo15NSManagedObject", "setCoordinate"]
 - ["CSo15NSManagedObject", "subtitle"]
 - ["CSo15NSManagedObject", "title"]
 - ["CSo15NSManagedObject", ""]
@@ -367,6 +408,7 @@ depends-member:
 - ["CSo8NSObject", "NSManagedObjectContext"]
 - !private ["CSo8NSObject", "NSNumber"]
 - !private ["CSo8NSObject", "Photo"]
+- !private ["CSo8NSObject", "QOS_CLASS_BACKGROUND"]
 - ["CSo8NSObject", "String"]
 - !private ["CSo8NSObject", "VirtualTouristClient"]
 - ["CSo8NSObject", "Void"]
@@ -374,6 +416,9 @@ depends-member:
 - !private ["CSo8NSObject", "count"]
 - !private ["CSo8NSObject", "deletePhoto"]
 - ["CSo8NSObject", "deletePhotos"]
+- !private ["CSo8NSObject", "dispatch_async"]
+- !private ["CSo8NSObject", "dispatch_get_global_queue"]
+- !private ["CSo8NSObject", "dispatch_get_main_queue"]
 - !private ["CSo8NSObject", "entityForName"]
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "integerValue"]
@@ -387,6 +432,7 @@ depends-member:
 - !private ["CSo8NSObject", "save"]
 - !private ["CSo8NSObject", "searchByLatLon"]
 - ["CSo8NSObject", "searchPhotos"]
+- ["CSo8NSObject", "setCoordinate"]
 - !private ["CSo8NSObject", "sharedInstance"]
 - !private ["CSo8NSObject", "subscript"]
 - ["CSo8NSObject", "subtitle"]
@@ -396,11 +442,15 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "Generator"]
 - !private ["PSo16NSObjectProtocol", "NSEntityDescription"]
 - !private ["PSo16NSObjectProtocol", "Photo"]
+- !private ["PSo16NSObjectProtocol", "QOS_CLASS_BACKGROUND"]
 - !private ["PSo16NSObjectProtocol", "VirtualTouristClient"]
 - ["PSo16NSObjectProtocol", "coordinate"]
 - !private ["PSo16NSObjectProtocol", "count"]
 - !private ["PSo16NSObjectProtocol", "deletePhoto"]
 - ["PSo16NSObjectProtocol", "deletePhotos"]
+- !private ["PSo16NSObjectProtocol", "dispatch_async"]
+- !private ["PSo16NSObjectProtocol", "dispatch_get_global_queue"]
+- !private ["PSo16NSObjectProtocol", "dispatch_get_main_queue"]
 - !private ["PSo16NSObjectProtocol", "entityForName"]
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "integerValue"]
@@ -414,6 +464,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "save"]
 - !private ["PSo16NSObjectProtocol", "searchByLatLon"]
 - ["PSo16NSObjectProtocol", "searchPhotos"]
+- ["PSo16NSObjectProtocol", "setCoordinate"]
 - !private ["PSo16NSObjectProtocol", "sharedInstance"]
 - !private ["PSo16NSObjectProtocol", "subscript"]
 - ["PSo16NSObjectProtocol", "subtitle"]
@@ -446,12 +497,16 @@ depends-member:
 - ["C15Virtual_Tourist3Pin", "NSManagedObjectContext"]
 - !private ["C15Virtual_Tourist3Pin", "NSNumber"]
 - !private ["C15Virtual_Tourist3Pin", "Photo"]
+- !private ["C15Virtual_Tourist3Pin", "QOS_CLASS_BACKGROUND"]
 - ["C15Virtual_Tourist3Pin", "String"]
 - !private ["C15Virtual_Tourist3Pin", "VirtualTouristClient"]
 - ["C15Virtual_Tourist3Pin", "Void"]
 - ["C15Virtual_Tourist3Pin", "coordinate"]
 - ["C15Virtual_Tourist3Pin", "deinit"]
 - ["C15Virtual_Tourist3Pin", "deletePhotos"]
+- !private ["C15Virtual_Tourist3Pin", "dispatch_async"]
+- !private ["C15Virtual_Tourist3Pin", "dispatch_get_global_queue"]
+- !private ["C15Virtual_Tourist3Pin", "dispatch_get_main_queue"]
 - ["C15Virtual_Tourist3Pin", "init"]
 - !private ["C15Virtual_Tourist3Pin", "latitude"]
 - !private ["C15Virtual_Tourist3Pin", "longitude"]
@@ -460,6 +515,7 @@ depends-member:
 - !private ["C15Virtual_Tourist3Pin", "photos"]
 - !private ["C15Virtual_Tourist3Pin", "print"]
 - ["C15Virtual_Tourist3Pin", "searchPhotos"]
+- ["C15Virtual_Tourist3Pin", "setCoordinate"]
 - ["C15Virtual_Tourist3Pin", "subtitle"]
 - ["C15Virtual_Tourist3Pin", "title"]
 - !private ["PSs21RandomAccessIndexType", "Distance"]
@@ -667,4 +723,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
-interface-hash: "b1f043a1e80c70ceb25f9ce1f83c761c"
+interface-hash: "26a4058832a3da0336d553a53ceec0a0"

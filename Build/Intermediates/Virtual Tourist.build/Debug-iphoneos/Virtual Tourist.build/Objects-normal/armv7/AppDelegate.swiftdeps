@@ -6,24 +6,24 @@ provides-nominal:
 provides-member:
 - ["C15Virtual_Tourist11AppDelegate", ""]
 provides-dynamic-lookup:
-- "applicationDidBecomeActive"
 - "applicationWillEnterForeground"
-- "application"
-- "applicationDidEnterBackground"
 - "window"
-- "applicationWillResignActive"
+- "application"
+- "applicationDidBecomeActive"
 - "applicationWillTerminate"
+- "applicationDidEnterBackground"
+- "applicationWillResignActive"
 depends-top-level:
-- !private "CoreDataStackManager"
-- "UIApplication"
-- "AppDelegate"
 - "NSObject"
+- "UIApplication"
+- "UIResponder"
+- "AppDelegate"
+- !private "BooleanLiteralType"
 - "UIWindow"
 - "AnyObject"
 - "Bool"
-- "UIResponder"
 - "UIApplicationDelegate"
-- !private "BooleanLiteralType"
+- !private "CoreDataStackManager"
 depends-member:
 - !private ["PSs9AnyObject", "CoreDataStackManager"]
 - ["PSs9AnyObject", "application"]

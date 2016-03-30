@@ -9,23 +9,23 @@ provides-member:
 - ["VC15Virtual_Tourist10ImageCache6Static", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- !private "NSURL"
-- "NSError"
-- !private "NSURLSession"
-- !private "NSURLRequest"
-- "UIImage"
-- !private "NSFileManager"
 - !private "BooleanLiteralType"
-- "Void"
-- !private "||"
-- "String"
-- !private "=="
-- !private "print"
-- "NSData"
-- !private "UIImagePNGRepresentation"
 - "NSURLSessionTask"
 - "ImageCache"
+- !private "NSURL"
+- !private "NSURLRequest"
+- !private "NSFileManager"
+- "NSError"
+- !private "||"
+- !private "print"
+- "Void"
+- "NSData"
+- !private "NSURLSession"
 - "StringLiteralType"
+- "String"
+- "UIImage"
+- !private "UIImagePNGRepresentation"
+- !private "=="
 depends-member:
 - ["PSs9AnyObject", "ImageCache"]
 - !private ["PSs9AnyObject", "NSData"]

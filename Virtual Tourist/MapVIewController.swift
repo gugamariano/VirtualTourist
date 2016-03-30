@@ -15,12 +15,7 @@ class MapViewController: UIViewController {
     
     @IBOutlet weak var mapView: MKMapView!
     var managedPin:Pin!
-    
-    var sharedContext: NSManagedObjectContext {
-        return CoreDataStackManager.sharedInstance().managedObjectContext
-    }
-    
-    
+    var annotation = MKPointAnnotation()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -43,6 +38,12 @@ class MapViewController: UIViewController {
         
     }
     
+    var sharedContext: NSManagedObjectContext {
+        return CoreDataStackManager.sharedInstance().managedObjectContext
+    }
+    
+    
+    //MARK: - PIN
     func restorePins(){
         
         let managedPin: [Pin] = fecthAllPins()
@@ -69,49 +70,44 @@ class MapViewController: UIViewController {
         }
     }
     
-    
+    //when the user press for more than 0.5 secs, drop a pin on the map and query Flickr for photos for the location on the map
     func longPress(sender: UILongPressGestureRecognizer) {
 
         let touchLocation = sender.locationInView(mapView)
         let coordinate = mapView.convertPoint(touchLocation,toCoordinateFromView: mapView)
 
         let dic = ["latitude" : coordinate.latitude , "longitude" : coordinate.longitude]
-
+        
+        annotation.coordinate = coordinate
         
         switch (sender.state) {
         case .Began:
-            print("Began")
+            print("began")
+            mapView.addAnnotation(annotation)
             
             managedPin=Pin(dictionary: dic, context:self.sharedContext)
-            managedPin.latitude=coordinate.latitude
-            managedPin.longitude=coordinate.longitude
             
         case .Changed :
             print("changed")
             
+        case .Ended :
+            print("end")
+            
+            mapView.removeAnnotation(annotation)
+            
             managedPin.latitude=coordinate.latitude
             managedPin.longitude=coordinate.longitude
             
-            
-            CoreDataStackManager.sharedInstance().saveContext()
-
-        case .Ended :
-
-            print("Ended")
-            
             mapView.addAnnotation(managedPin)
             
-            dispatch_async(dispatch_get_main_queue()) {
-                
-                CoreDataStackManager.sharedInstance().saveContext()
-                
-                self.managedPin.searchPhotos(false, didComplete: { (count) -> Void in
-                    print("loaded \(count) photos ")
 
-                })
-            }
+            CoreDataStackManager.sharedInstance().saveContext()
+
             
-            showPhotoAlbumViewController(self.managedPin)
+            self.managedPin.searchPhotos(false, didComplete: { (count) -> Void in
+                
+                
+            })
             
             
         default:
@@ -120,26 +116,27 @@ class MapViewController: UIViewController {
         }
     }
     
-    
+    //MARK: - mapView
     func mapView(mapView: MKMapView, viewForAnnotation annotation: MKAnnotation) -> MKAnnotationView? {
         
-        var v : MKAnnotationView! = nil
-        let ident = "pin"
-        v = mapView.dequeueReusableAnnotationViewWithIdentifier(ident)
+        if annotation is MKPointAnnotation {
         
-        if v == nil {
-            v = MKPinAnnotationView(annotation: annotation, reuseIdentifier: ident)
+            let pinAnnotationView = MKPinAnnotationView(annotation: annotation, reuseIdentifier: "photoPin")
+            
+            pinAnnotationView.draggable = true
+            pinAnnotationView.animatesDrop = true
+            
+            return pinAnnotationView
+            
         }
         
-        v.annotation = annotation
-        v.draggable = true
-        return v
+        return nil
         
     }
     
     func mapView(mapView: MKMapView, didSelectAnnotationView view: MKAnnotationView) {
         
-        //mapView.deselectAnnotation(view.annotation, animated: false)
+        mapView.deselectAnnotation(view.annotation, animated: false)
         
         let pin = view.annotation as! Pin
                 
@@ -147,26 +144,7 @@ class MapViewController: UIViewController {
         
     }
     
-    func showPhotoAlbumViewController(pin : Pin){
-        
-        let controller=storyboard?.instantiateViewControllerWithIdentifier("PhotoAlbumViewController") as! PhotoAlbumViewController!
-        controller.pin=pin
-        
-        
-        showViewController(controller, sender: nil)
-        
-    }
-    
-    
-    
-    
-    var filePath : String {
-        let manager = NSFileManager.defaultManager()
-        let url = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as NSURL
-        return url.URLByAppendingPathComponent("mapRegionArchive").path!
-    }
-    
-    
+
     
     func saveMapRegion() {
         
@@ -206,6 +184,29 @@ class MapViewController: UIViewController {
             mapView.setRegion(savedRegion, animated: animated)
         }
     }
+
+    //MARK: - Photo Album
+    func showPhotoAlbumViewController(pin : Pin){
+        
+        let controller=storyboard?.instantiateViewControllerWithIdentifier("PhotoAlbumViewController") as! PhotoAlbumViewController!
+        controller.pin=pin
+        
+        
+        showViewController(controller, sender: nil)
+        
+    }
+    
+    
+    
+    
+    var filePath : String {
+        let manager = NSFileManager.defaultManager()
+        let url = manager.URLsForDirectory(.DocumentDirectory, inDomains: .UserDomainMask).first! as NSURL
+        return url.URLByAppendingPathComponent("mapRegionArchive").path!
+    }
+    
+    
+    
     
     
 }
@@ -215,7 +216,6 @@ extension MapViewController : MKMapViewDelegate {
     func mapView(mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
         saveMapRegion()
     }
-    
     
     
 }

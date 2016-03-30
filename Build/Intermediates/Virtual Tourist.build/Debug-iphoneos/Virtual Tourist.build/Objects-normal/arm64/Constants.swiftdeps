@@ -21,10 +21,10 @@ provides-member:
 - ["VC15Virtual_Tourist9Constants13Notifications", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "Constants"
-- "UnicodeScalarType"
 - "NSObject"
 - "StringLiteralType"
+- "Constants"
+- "UnicodeScalarType"
 depends-member:
 - ["PSs9AnyObject", "init"]
 - ["PSs9AnyObject", ""]

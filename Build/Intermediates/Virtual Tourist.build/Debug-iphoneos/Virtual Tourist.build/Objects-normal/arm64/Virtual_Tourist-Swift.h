@@ -119,6 +119,7 @@ SWIFT_CLASS("_TtC15Virtual_Tourist9Constants")
 @end
 
 @class Pin;
+@class MKPointAnnotation;
 @class NSManagedObjectContext;
 @class UILongPressGestureRecognizer;
 @class MKMapView;
@@ -131,18 +132,19 @@ SWIFT_CLASS("_TtC15Virtual_Tourist17MapViewController")
 @interface MapViewController : UIViewController
 @property (nonatomic, weak) IBOutlet MKMapView * __null_unspecified mapView;
 @property (nonatomic, strong) Pin * __null_unspecified managedPin;
-@property (nonatomic, readonly, strong) NSManagedObjectContext * __nonnull sharedContext;
+@property (nonatomic, strong) MKPointAnnotation * __nonnull annotation;
 - (void)viewDidLoad;
 - (void)didReceiveMemoryWarning;
+@property (nonatomic, readonly, strong) NSManagedObjectContext * __nonnull sharedContext;
 - (void)restorePins;
 - (NSArray<Pin *> * __nonnull)fecthAllPins;
 - (void)longPress:(UILongPressGestureRecognizer * __nonnull)sender;
 - (MKAnnotationView * __nullable)mapView:(MKMapView * __nonnull)mapView viewForAnnotation:(id <MKAnnotation> __nonnull)annotation;
 - (void)mapView:(MKMapView * __nonnull)mapView didSelectAnnotationView:(MKAnnotationView * __nonnull)view;
-- (void)showPhotoAlbumViewController:(Pin * __nonnull)pin;
-@property (nonatomic, readonly, copy) NSString * __nonnull filePath;
 - (void)saveMapRegion;
 - (void)restoreMapRegion:(BOOL)animated;
+- (void)showPhotoAlbumViewController:(Pin * __nonnull)pin;
+@property (nonatomic, readonly, copy) NSString * __nonnull filePath;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -159,7 +161,7 @@ SWIFT_CLASS("_TtC15Virtual_Tourist5Photo")
 @interface Photo : NSManagedObject
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * __nonnull)dictionary context:(NSManagedObjectContext * __nonnull)context OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * __nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * __nullable)context OBJC_DESIGNATED_INITIALIZER;
-- (void)delete;
+- (void)deletePhoto:(BOOL)save;
 - (void)saveImage:(UIImage * __nonnull)image;
 - (UIImage * __nullable)getImage;
 @end
@@ -176,34 +178,36 @@ SWIFT_CLASS("_TtC15Virtual_Tourist5Photo")
 @class UICollectionView;
 @class UICollectionViewCell;
 @class PhotoCell;
+@class UILabel;
 @class UIButton;
 
 SWIFT_CLASS("_TtC15Virtual_Tourist24PhotoAlbumViewController")
 @interface PhotoAlbumViewController : UIViewController <UIScrollViewDelegate, UICollectionViewDelegate, NSFetchedResultsControllerDelegate, UICollectionViewDataSource>
+@property (nonatomic, weak) IBOutlet UILabel * __null_unspecified noImagesLabel;
 @property (nonatomic, weak) IBOutlet MKMapView * __null_unspecified mapView;
 @property (nonatomic, weak) IBOutlet UICollectionView * __null_unspecified collectionView;
 @property (nonatomic, weak) IBOutlet UIButton * __null_unspecified newCollectionBtn;
-- (IBAction)newCollectionAction:(id __nonnull)sender;
 @property (nonatomic, copy) NSArray<NSIndexPath *> * __nonnull selectedIndexes;
 @property (nonatomic, copy) NSArray<NSIndexPath *> * __null_unspecified insertedIndexPaths;
 @property (nonatomic, copy) NSArray<NSIndexPath *> * __null_unspecified deletedIndexPaths;
 @property (nonatomic, copy) NSArray<NSIndexPath *> * __null_unspecified updatedIndexPaths;
+@property (nonatomic) NSInteger totalLoaded;
 @property (nonatomic, strong) Pin * __null_unspecified pin;
-- (void)viewDidLoad;
-- (void)viewWillAppear:(BOOL)animated;
+- (IBAction)newCollectionAction:(id __nonnull)sender;
 @property (nonatomic, readonly, strong) NSManagedObjectContext * __nonnull sharedContext;
 @property (nonatomic, strong) NSFetchedResultsController * __nonnull fetchedResultsController;
-- (void)didLoadAllPhotos:(id __nonnull)sender;
-- (void)didLoadPhoto:(Photo * __nonnull)photo;
+- (void)controllerWillChangeContent:(NSFetchedResultsController * __nonnull)controller;
+- (void)controller:(NSFetchedResultsController * __nonnull)controller didChangeObject:(id __nonnull)anObject atIndexPath:(NSIndexPath * __nullable)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath * __nullable)newIndexPath;
+- (void)controllerDidChangeContent:(NSFetchedResultsController * __nonnull)controller;
+- (void)viewDidLoad;
+- (void)viewWillAppear:(BOOL)animated;
+- (void)showOrHideLabel;
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView * __nonnull)collectionView;
 - (NSInteger)collectionView:(UICollectionView * __nonnull)collectionView numberOfItemsInSection:(NSInteger)section;
 - (UICollectionViewCell * __nonnull)collectionView:(UICollectionView * __nonnull)collectionView cellForItemAtIndexPath:(NSIndexPath * __nonnull)indexPath;
 - (void)collectionView:(UICollectionView * __nonnull)collectionView didSelectItemAtIndexPath:(NSIndexPath * __nonnull)indexPath;
-- (void)getRemoteImage:(PhotoCell * __nonnull)cell photo:(Photo * __nonnull)photo;
-- (void)controllerWillChangeContent:(NSFetchedResultsController * __nonnull)controller;
-- (void)controller:(NSFetchedResultsController * __nonnull)controller didChangeObject:(id __nonnull)anObject atIndexPath:(NSIndexPath * __nullable)indexPath forChangeType:(NSFetchedResultsChangeType)type newIndexPath:(NSIndexPath * __nullable)newIndexPath;
-- (void)controllerDidChangeContent:(NSFetchedResultsController * __nonnull)controller;
 - (void)centerMapOnLocation:(CLLocationCoordinate2D)coordinate;
+- (void)getRemoteImage:(PhotoCell * __nonnull)cell photo:(Photo * __nonnull)photo;
 - (nonnull instancetype)initWithNibName:(NSString * __nullable)nibNameOrNil bundle:(NSBundle * __nullable)nibBundleOrNil OBJC_DESIGNATED_INITIALIZER;
 - (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder OBJC_DESIGNATED_INITIALIZER;
 @end
@@ -236,6 +240,7 @@ SWIFT_CLASS("_TtC15Virtual_Tourist3Pin")
 - (nonnull instancetype)initWithEntity:(NSEntityDescription * __nonnull)entity insertIntoManagedObjectContext:(NSManagedObjectContext * __nullable)context OBJC_DESIGNATED_INITIALIZER;
 - (nonnull instancetype)initWithDictionary:(NSDictionary<NSString *, id> * __nonnull)dictionary context:(NSManagedObjectContext * __nonnull)context OBJC_DESIGNATED_INITIALIZER;
 @property (nonatomic, readonly) CLLocationCoordinate2D coordinate;
+- (void)setCoordinate:(CLLocationCoordinate2D)newCoordinate;
 - (void)deletePhotos;
 - (void)searchPhotos:(BOOL)nextPage didComplete:(void (^ __nonnull)(NSInteger))didComplete;
 @end

@@ -8,14 +8,14 @@ provides-member:
 - ["C15Virtual_Tourist3Pin", "longitude"]
 - ["C15Virtual_Tourist3Pin", "photos"]
 provides-dynamic-lookup:
+- "longitude"
+- "latitude"
 - "page"
 - "photos"
-- "latitude"
-- "longitude"
 depends-top-level:
-- "Pin"
-- "NSNumber"
 - "NSSet"
+- "NSNumber"
+- "Pin"
 depends-member:
 - ["PSs9AnyObject", "latitude"]
 - ["PSs9AnyObject", "longitude"]

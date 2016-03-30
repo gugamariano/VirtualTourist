@@ -74,7 +74,7 @@
                                                     <rect key="frame" x="-10" y="-10" width="20" height="20"/>
                                                     <color key="color" red="0.40000000600000002" green="0.40000000600000002" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
                                                 </activityIndicatorView>
-                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jgc-bV-Kt5">
+                                                <imageView hidden="YES" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="jgc-bV-Kt5">
                                                     <rect key="frame" x="0.0" y="0.0" width="240" height="128"/>
                                                     <variation key="widthClass=compact" fixedFrame="YES">
                                                         <rect key="frame" x="4" y="6" width="100" height="80"/>
@@ -119,9 +119,6 @@
                                         </connections>
                                     </collectionViewCell>
                                 </cells>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="0.0" y="161" width="400" height="393"/>
-                                </variation>
                                 <connections>
                                     <outlet property="dataSource" destination="Lia-en-PtP" id="qOe-eV-d2E"/>
                                     <outlet property="delegate" destination="Lia-en-PtP" id="g78-Xa-rEs"/>
@@ -156,11 +153,8 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="No Images" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ilE-LU-8NM">
                                 <rect key="frame" x="-42" y="-21" width="42" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
-                                <variation key="widthClass=compact" misplaced="YES">
-                                    <rect key="frame" x="159" y="579" width="82" height="21"/>
-                                </variation>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -189,19 +183,19 @@
                                 <exclude reference="ilE-LU-8NM"/>
                             </mask>
                             <mask key="constraints">
+                                <exclude reference="6r5-Qo-Mso"/>
+                                <exclude reference="5OW-6U-Fui"/>
+                                <exclude reference="duc-tq-FKX"/>
+                                <exclude reference="yOA-bF-Gjm"/>
+                                <exclude reference="PNG-il-Vmd"/>
+                                <exclude reference="mi4-iQ-KFd"/>
+                                <exclude reference="qR4-FA-sfM"/>
                                 <exclude reference="0l5-h6-K6x"/>
                                 <exclude reference="FnW-ng-ywH"/>
                                 <exclude reference="IlG-V1-E4j"/>
                                 <exclude reference="JFr-nN-lXc"/>
                                 <exclude reference="WzK-LB-e3B"/>
                                 <exclude reference="cfZ-fi-Y7X"/>
-                                <exclude reference="qR4-FA-sfM"/>
-                                <exclude reference="5OW-6U-Fui"/>
-                                <exclude reference="duc-tq-FKX"/>
-                                <exclude reference="yOA-bF-Gjm"/>
-                                <exclude reference="6r5-Qo-Mso"/>
-                                <exclude reference="PNG-il-Vmd"/>
-                                <exclude reference="mi4-iQ-KFd"/>
                             </mask>
                         </variation>
                         <variation key="widthClass=compact">
@@ -212,19 +206,19 @@
                                 <include reference="ilE-LU-8NM"/>
                             </mask>
                             <mask key="constraints">
+                                <include reference="6r5-Qo-Mso"/>
+                                <include reference="5OW-6U-Fui"/>
+                                <include reference="duc-tq-FKX"/>
+                                <include reference="yOA-bF-Gjm"/>
+                                <include reference="PNG-il-Vmd"/>
+                                <include reference="mi4-iQ-KFd"/>
+                                <include reference="qR4-FA-sfM"/>
                                 <include reference="0l5-h6-K6x"/>
                                 <include reference="FnW-ng-ywH"/>
                                 <include reference="IlG-V1-E4j"/>
                                 <include reference="JFr-nN-lXc"/>
                                 <include reference="WzK-LB-e3B"/>
                                 <include reference="cfZ-fi-Y7X"/>
-                                <include reference="qR4-FA-sfM"/>
-                                <include reference="5OW-6U-Fui"/>
-                                <include reference="duc-tq-FKX"/>
-                                <include reference="yOA-bF-Gjm"/>
-                                <include reference="6r5-Qo-Mso"/>
-                                <include reference="PNG-il-Vmd"/>
-                                <include reference="mi4-iQ-KFd"/>
                             </mask>
                         </variation>
                     </view>

@@ -8,12 +8,12 @@ provides-member:
 - ["C15Virtual_Tourist5Photo", "pin"]
 provides-dynamic-lookup:
 - "file"
-- "pin"
 - "url"
+- "pin"
 depends-top-level:
 - "String"
-- "Photo"
 - "Pin"
+- "Photo"
 depends-member:
 - ["PSs9AnyObject", "file"]
 - ["PSs9AnyObject", "pin"]

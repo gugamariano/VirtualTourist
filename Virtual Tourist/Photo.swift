@@ -60,9 +60,6 @@ class Photo: NSManagedObject {
         
         ImageCache.Static.instance.storeImage(image, withIdentifier: file!)
         downloadStatus = .Loaded
-        NSNotificationCenter.defaultCenter().postNotificationName(Constants.Notifications.PHOTO_LOADED_NOTIFICATION, object: self)
-        
-        print("Photo saved \(file)")
     }
 
     

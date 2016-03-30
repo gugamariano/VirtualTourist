@@ -1,16 +1,16 @@
 version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
 options: "46790246b43993fe74cf7071a6ab9ab7"
-build_time: [512446000, 917108000]
+build_time: [512621694, 164238000]
 inputs:
-  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/PhotoAlbumViewController.swift": [512445764, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/PhotoAlbumViewController.swift": [512621419, 0]
   "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Photo+CoreDataProperties.swift": [508351086, 0]
-  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Pin.swift": [512361318, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Pin.swift": [512621673, 0]
   "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Constants.swift": [512278996, 0]
   "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/AppDelegate.swift": [508550064, 0]
-  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/MapVIewController.swift": [512361441, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/MapVIewController.swift": [512619960, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Photo.swift": [512621456, 0]
   "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/VirtualTouristClient.swift": [512360713, 0]
   "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Pin+CoreDataProperties.swift": [512246880, 0]
-  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/ImageCache.swift": [512362186, 0]
-  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/Photo.swift": [512362800, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/ImageCache.swift": [512536130, 0]
   "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/PhotoCell.swift": [512255859, 0]
-  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/CoreDataStackManager.swift": [508550030, 0]
+  "/Users/aaugusto/Documents/udacity-workspace/Virtual Tourist/Virtual Tourist/CoreDataStackManager.swift": [512618817, 0]
