@@ -82,17 +82,11 @@ class MapViewController: UIViewController {
         
         switch (sender.state) {
         case .Began:
-            print("began")
+           
             mapView.addAnnotation(annotation)
-            
             managedPin=Pin(dictionary: dic, context:self.sharedContext)
             
-        case .Changed :
-            print("changed")
-            
         case .Ended :
-            print("end")
-            
             mapView.removeAnnotation(annotation)
             
             managedPin.latitude=coordinate.latitude

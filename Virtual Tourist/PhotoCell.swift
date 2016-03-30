@@ -23,7 +23,6 @@ class PhotoCell : UICollectionViewCell{
         
         didSet {
             if let taskToCancel = oldValue {
-                print ("task to cancel ")
                 taskToCancel.cancel()
             }
         }

@@ -5,26 +5,24 @@
     //  Created by antonio silva on 1/31/16.
     //  Copyright © 2016 antonio silva. All rights reserved.
     //
-
+    
     import Foundation
-
-
+    
+    
     import UIKit
     import MapKit
     import CoreData
-
+    
     class PhotoAlbumViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate, NSFetchedResultsControllerDelegate {
         
-        
+        //Mark: - @IBOutlet
         @IBOutlet weak var noImagesLabel: UILabel!
         @IBOutlet weak var mapView: MKMapView!
         @IBOutlet weak var collectionView: UICollectionView!
-        
         @IBOutlet weak var newCollectionBtn: UIButton!
         
         
-        
-        
+        //Mark: - variables
         // The selected indexes array keeps all of the indexPaths for cells that are "selected". The array is
         // used inside cellForItemAtIndexPath to lower the alpha of selected cells.  You can see how the array
         // works by searchign through the code for 'selectedIndexes'
@@ -40,7 +38,7 @@
         private let sectionInsets = UIEdgeInsets(top: 1, left: 1, bottom: 1, right: 1)
         var pin:Pin!
         
-        
+        //Mark: - @IBAction
         @IBAction func newCollectionAction(sender: AnyObject) {
             
             dispatch_async(dispatch_get_main_queue()) {
@@ -59,8 +57,6 @@
         var sharedContext: NSManagedObjectContext {
             return CoreDataStackManager.sharedInstance().managedObjectContext
         }
-        
-        
         
         lazy var fetchedResultsController: NSFetchedResultsController = {
             let fetchRequest = NSFetchRequest(entityName: "Photo")
@@ -131,7 +127,6 @@
                 }
                 
                 for indexPath in self.updatedIndexPaths {
-                    print("reload items at index path \([indexPath])")
                     self.collectionView!.reloadItemsAtIndexPaths([indexPath])
                 }
                 
@@ -139,20 +134,12 @@
             
         }
         
-        
-        
         //MARK: - UI
         override func viewDidLoad() {
             super.viewDidLoad()
             
-            //        // Notfications for image loading
-            //        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didLoadAllPhotos:", name: Constants.Notifications.ALL_PHOTO_LOADED_NOTIFICATION, object: pin)
-            //        NSNotificationCenter.defaultCenter().addObserver(self, selector: "didLoadPhoto:", name: Constants.Notifications.PHOTO_LOADED_NOTIFICATION, object: nil)
-            //
             mapView.addAnnotation(pin)
             centerMapOnLocation(pin.coordinate)
-            
-            
             
         }
         
@@ -172,46 +159,35 @@
         
         func showOrHideLabel(){
             dispatch_async(dispatch_get_main_queue()) {
-            let count = self.fetchedResultsController.fetchedObjects?.count
-            
-            
+                let count = self.fetchedResultsController.fetchedObjects?.count
+                
+                
                 if ( count > 0){
                     self.noImagesLabel.hidden=true
                     
                 }else{
                     self.noImagesLabel.hidden=false
                 }
-            
-            
-            self.totalLoaded=0
-            
-            for photo in self.pin.photos!  {
-                if let p = photo as? Photo where p.downloadStatus == .Loaded{
-                    self.totalLoaded++
+                
+                
+                self.totalLoaded=0
+                
+                for photo in self.pin.photos!  {
+                    if let p = photo as? Photo where p.downloadStatus == .Loaded{
+                        self.totalLoaded++
+                    }
+                }
+                
+                
+                if(self.totalLoaded == count ) {
+                    self.newCollectionBtn.enabled=true
+                }else{
+                    self.newCollectionBtn.enabled=false
                 }
             }
             
             
-            if(self.totalLoaded == count ) {
-                self.newCollectionBtn.enabled=true
-            }else{
-                self.newCollectionBtn.enabled=false
-            }
-            }
-            
-            
         }
-        
-        
-        //    // Each photo posts a notificaation when it is loaded
-        //    func didLoadPhoto(cell: PhotoCell, photo: Photo) {
-        //
-        //        totalLoaded++
-        //        showOrHideLabel()
-        //        dispatch_async(dispatch_get_main_queue()) {
-        //            self.collectionView!.reloadData()
-        //        }
-        //    }
         
         //MARK: - CollectionView
         func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
@@ -245,7 +221,7 @@
                 
                 
             } else if(photo.downloadStatus == .NotLoaded) {
-                print("not loaded \(photo.file)")
+                
                 photo.downloadStatus = .Loading
                 
                 cell.photo.hidden=true
@@ -253,12 +229,7 @@
                 
                 getRemoteImage(cell, photo: photo)
                 
-            }else if(photo.downloadStatus == .Loading) {
-                print("still loading \(photo.file)")
-                
             }
-            
-            
             return cell
             
         }
@@ -284,32 +255,32 @@
         func getRemoteImage(cell: PhotoCell, photo: Photo) {
             
             
-                    ImageCache.Static.instance.downloadImage(photo.url!) { imageData, error in
-                    if imageData != nil {
-                        
-                        photo.downloadStatus = .Loaded
-                        
-                        let image = UIImage(data: imageData!)
-                        photo.saveImage(image!)
-                        
-                        
-                        cell.photo.image=image
-                        cell.photo.hidden=false
-                        self.showOrHideLabel()
-                        
-                    } else {
-                        print("error downloading image, trying again \(error)")
-                        //self.getRemoteImage(cell,photo: photo)
-                    }
+            let task=ImageCache.Static.instance.downloadImage(photo.url!) { imageData, error in
+                if imageData != nil {
+                    
+                    photo.downloadStatus = .Loaded
+                    
+                    let image = UIImage(data: imageData!)
+                    photo.saveImage(image!)
+                    
+                    
+                    cell.photo.image=image
+                    cell.photo.hidden=false
+                    self.showOrHideLabel()
+                    
+                } else {
+                    print("error downloading image, trying again \(error)")
+                    //self.getRemoteImage(cell,photo: photo)
                 }
+            }
             
-            //cell.taskToCancelifCellIsReused = task
+            cell.taskToCancelifCellIsReused = task
         }
         
         
     }
-
-
+    
+    
     extension PhotoAlbumViewController : UICollectionViewDelegateFlowLayout{
         
         func collectionView(collectionView: UICollectionView,
@@ -336,4 +307,4 @@
         }
         
     }
-
+    

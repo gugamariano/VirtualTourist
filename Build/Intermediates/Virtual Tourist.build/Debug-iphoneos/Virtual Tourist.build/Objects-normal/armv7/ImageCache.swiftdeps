@@ -9,26 +9,27 @@ provides-member:
 - ["VC15Virtual_Tourist10ImageCache6Static", ""]
 provides-dynamic-lookup:
 depends-top-level:
-- "NSData"
-- !private "QOS_CLASS_BACKGROUND"
-- !private "dispatch_get_main_queue"
-- !private "NSURLRequest"
-- !private "dispatch_async"
-- "NSError"
-- !private "NSFileManager"
-- !private "print"
-- "BooleanLiteralType"
-- !private "NSURL"
 - "Void"
-- "String"
-- !private "=="
-- !private "||"
-- !private "UIImagePNGRepresentation"
-- "StringLiteralType"
-- !private "dispatch_get_global_queue"
+- "BooleanLiteralType"
 - "ImageCache"
-- "UIImage"
+- !private "QOS_CLASS_BACKGROUND"
 - !private "NSURLSession"
+- !private "dispatch_get_global_queue"
+- "NSError"
+- "UIImage"
+- !private "dispatch_async"
+- !private "dispatch_get_main_queue"
+- !private "print"
+- "StringLiteralType"
+- !private "NSURL"
+- "String"
+- !private "UIImagePNGRepresentation"
+- !private "||"
+- !private "=="
+- "NSData"
+- "NSURLSessionDataTask"
+- !private "NSFileManager"
+- !private "NSURLRequest"
 depends-member:
 - ["PSs9AnyObject", "ImageCache"]
 - !private ["PSs9AnyObject", "NSData"]
@@ -164,6 +165,7 @@ depends-member:
 - !private ["C15Virtual_Tourist10ImageCache", "NSURL"]
 - !private ["C15Virtual_Tourist10ImageCache", "NSURLRequest"]
 - !private ["C15Virtual_Tourist10ImageCache", "NSURLSession"]
+- ["C15Virtual_Tourist10ImageCache", "NSURLSessionDataTask"]
 - !private ["C15Virtual_Tourist10ImageCache", "QOS_CLASS_BACKGROUND"]
 - ["C15Virtual_Tourist10ImageCache", "Static"]
 - ["C15Virtual_Tourist10ImageCache", "String"]
@@ -482,4 +484,4 @@ depends-external:
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreImage.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreLocation.swiftmodule"
 - "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/lib/swift/iphoneos/armv7/CoreData.swiftmodule"
-interface-hash: "0c87f365a4cb1810ac78dea450aed0a1"
+interface-hash: "5f4b9d9de6202e20dd13af9f5816cdaf"

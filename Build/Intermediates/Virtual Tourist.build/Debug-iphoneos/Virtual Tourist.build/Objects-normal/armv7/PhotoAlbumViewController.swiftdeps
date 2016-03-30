@@ -6,83 +6,83 @@ provides-nominal:
 provides-member:
 - ["C15Virtual_Tourist24PhotoAlbumViewController", ""]
 provides-dynamic-lookup:
-- "mapView"
-- "updatedIndexPaths"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "collectionView"
+- "collectionView"
 - "centerMapOnLocation"
-- "sharedContext"
-- "newCollectionAction"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "collectionView"
-- "showOrHideLabel"
-- "viewDidLoad"
 - "getRemoteImage"
-- "selectedIndexes"
-- "deletedIndexPaths"
+- "updatedIndexPaths"
+- "numberOfSectionsInCollectionView"
+- "noImagesLabel"
+- "insertedIndexPaths"
+- "sharedContext"
+- "viewWillAppear"
+- "totalLoaded"
 - "pin"
-- "controllerWillChangeContent"
+- "fetchedResultsController"
+- "mapView"
+- "deletedIndexPaths"
 - "newCollectionBtn"
 - "controllerDidChangeContent"
-- "totalLoaded"
+- "newCollectionAction"
+- "controllerWillChangeContent"
+- "viewDidLoad"
+- "showOrHideLabel"
 - "controller"
-- "numberOfSectionsInCollectionView"
-- "insertedIndexPaths"
-- "fetchedResultsController"
-- "noImagesLabel"
-- "viewWillAppear"
+- "selectedIndexes"
 depends-top-level:
-- "NSManagedObjectContext"
-- "UICollectionViewDataSource"
-- !private "Void"
-- "Array"
-- "UICollectionViewDelegate"
-- "BooleanLiteralType"
-- "NSFetchedResultsControllerDelegate"
-- !private "++"
-- "MKMapView"
-- !private "ImageCache"
-- !private "MKCoordinateRegion"
-- "UIEdgeInsets"
-- "UIButton"
-- "StringLiteralType"
-- "NSFetchedResultsController"
-- !private "=="
-- !private "dispatch_async"
-- "Photo"
-- !private "NSPredicate"
-- "CGFloat"
-- !private ">"
-- "PhotoAlbumViewController"
-- "Bool"
-- !private "CoreDataStackManager"
-- "Pin"
-- "UICollectionViewLayout"
-- "UICollectionViewCell"
-- !private "NSSortDescriptor"
-- "CGSize"
-- "NSFetchedResultsChangeType"
-- "Int"
-- "CLLocationCoordinate2D"
-- !private "MKCoordinateSpanMake"
-- !private "print"
 - !private "??"
+- "Photo"
+- "CGFloat"
+- "UIButton"
+- !private ">"
+- "NSFetchedResultsControllerDelegate"
+- "UICollectionViewLayout"
 - !private "UIImage"
-- !private "--"
+- !private "NSSortDescriptor"
+- !private "NSPredicate"
+- "Pin"
+- !private "++"
 - "PhotoCell"
-- "UICollectionViewDelegateFlowLayout"
+- "PhotoAlbumViewController"
+- !private "MKCoordinateSpanMake"
 - "UIViewController"
+- "NSManagedObjectContext"
+- "NSFetchedResultsChangeType"
+- "BooleanLiteralType"
+- !private "dispatch_async"
+- !private "--"
+- !private "ImageCache"
 - !private "dispatch_get_main_queue"
-- "UILabel"
+- "Bool"
+- "MKMapView"
+- !private "CoreDataStackManager"
+- !private "=="
+- !private "!="
+- "CGSize"
 - "UICollectionView"
 - "NSIndexPath"
-- !private "!="
-- "AnyObject"
+- "StringLiteralType"
+- "Int"
+- "UILabel"
 - !private "NSFetchRequest"
+- "UICollectionViewCell"
+- "UIEdgeInsets"
+- "Array"
+- "CLLocationCoordinate2D"
+- "NSFetchedResultsController"
+- !private "Void"
+- "UICollectionViewDataSource"
+- "UICollectionViewDelegateFlowLayout"
+- "AnyObject"
+- "UICollectionViewDelegate"
+- !private "MKCoordinateRegion"
+- !private "print"
 depends-member:
 - !private ["PSs9AnyObject", "CGSize"]
 - !private ["PSs9AnyObject", "CoreDataStackManager"]
@@ -169,6 +169,7 @@ depends-member:
 - !private ["PSs9AnyObject", "sortDescriptors"]
 - !private ["PSs9AnyObject", "startAnimating"]
 - !private ["PSs9AnyObject", "stopAnimating"]
+- !private ["PSs9AnyObject", "taskToCancelifCellIsReused"]
 - ["PSs9AnyObject", "totalLoaded"]
 - ["PSs9AnyObject", "updatedIndexPaths"]
 - !private ["PSs9AnyObject", "url"]
@@ -291,6 +292,7 @@ depends-member:
 - !private ["PSs11CVarArgType", "sortDescriptors"]
 - !private ["PSs11CVarArgType", "startAnimating"]
 - !private ["PSs11CVarArgType", "stopAnimating"]
+- !private ["PSs11CVarArgType", "taskToCancelifCellIsReused"]
 - ["PSs11CVarArgType", "totalLoaded"]
 - ["PSs11CVarArgType", "updatedIndexPaths"]
 - !private ["PSs11CVarArgType", "url"]
@@ -416,6 +418,7 @@ depends-member:
 - !private ["PSs23CustomStringConvertible", "startAnimating"]
 - !private ["PSs23CustomStringConvertible", "stopAnimating"]
 - !private ["PSs23CustomStringConvertible", "subscript"]
+- !private ["PSs23CustomStringConvertible", "taskToCancelifCellIsReused"]
 - ["PSs23CustomStringConvertible", "totalLoaded"]
 - ["PSs23CustomStringConvertible", "updatedIndexPaths"]
 - !private ["PSs23CustomStringConvertible", "url"]
@@ -518,6 +521,7 @@ depends-member:
 - !private ["PSs9Equatable", "sortDescriptors"]
 - !private ["PSs9Equatable", "startAnimating"]
 - !private ["PSs9Equatable", "stopAnimating"]
+- !private ["PSs9Equatable", "taskToCancelifCellIsReused"]
 - ["PSs9Equatable", "totalLoaded"]
 - ["PSs9Equatable", "updatedIndexPaths"]
 - !private ["PSs9Equatable", "url"]
@@ -621,6 +625,7 @@ depends-member:
 - !private ["PSs8Hashable", "sortDescriptors"]
 - !private ["PSs8Hashable", "startAnimating"]
 - !private ["PSs8Hashable", "stopAnimating"]
+- !private ["PSs8Hashable", "taskToCancelifCellIsReused"]
 - ["PSs8Hashable", "totalLoaded"]
 - ["PSs8Hashable", "updatedIndexPaths"]
 - !private ["PSs8Hashable", "url"]
@@ -764,6 +769,7 @@ depends-member:
 - !private ["PSo8NSCoding", "sortDescriptors"]
 - !private ["PSo8NSCoding", "startAnimating"]
 - !private ["PSo8NSCoding", "stopAnimating"]
+- !private ["PSo8NSCoding", "taskToCancelifCellIsReused"]
 - ["PSo8NSCoding", "totalLoaded"]
 - ["PSo8NSCoding", "updatedIndexPaths"]
 - ["PSo8NSCoding", "viewDidLoad"]
@@ -1001,6 +1007,7 @@ depends-member:
 - !private ["CSo8NSObject", "sortDescriptors"]
 - !private ["CSo8NSObject", "startAnimating"]
 - !private ["CSo8NSObject", "stopAnimating"]
+- !private ["CSo8NSObject", "taskToCancelifCellIsReused"]
 - ["CSo8NSObject", "totalLoaded"]
 - ["CSo8NSObject", "updatedIndexPaths"]
 - !private ["CSo8NSObject", "url"]
@@ -1086,6 +1093,7 @@ depends-member:
 - !private ["PSo16NSObjectProtocol", "sortDescriptors"]
 - !private ["PSo16NSObjectProtocol", "startAnimating"]
 - !private ["PSo16NSObjectProtocol", "stopAnimating"]
+- !private ["PSo16NSObjectProtocol", "taskToCancelifCellIsReused"]
 - ["PSo16NSObjectProtocol", "totalLoaded"]
 - ["PSo16NSObjectProtocol", "updatedIndexPaths"]
 - !private ["PSo16NSObjectProtocol", "url"]
@@ -1191,6 +1199,7 @@ depends-member:
 - ["C15Virtual_Tourist24PhotoAlbumViewController", "viewWillAppear"]
 - !private ["C15Virtual_Tourist9PhotoCell", "activityIndicator"]
 - !private ["C15Virtual_Tourist9PhotoCell", "photo"]
+- !private ["C15Virtual_Tourist9PhotoCell", "taskToCancelifCellIsReused"]
 - !private ["C15Virtual_Tourist3Pin", "coordinate"]
 - !private ["C15Virtual_Tourist3Pin", "deinit"]
 - !private ["C15Virtual_Tourist3Pin", "deletePhotos"]
@@ -1236,7 +1245,6 @@ depends-member:
 - !private ["PSs10Strideable", "Distance"]
 - !private ["PSs10Strideable", "IntegerLiteralType"]
 - !private ["PSs10Strideable", "Stride"]
-- !private ["SS", "deinit"]
 - !private ["SS", "init"]
 - !private ["PSs30StringInterpolationConvertible", "init"]
 - !private ["PSs24StringLiteralConvertible", "init"]
@@ -1255,6 +1263,7 @@ depends-member:
 - !private ["PSo29UIAccessibilityIdentification", "setRegion"]
 - !private ["PSo29UIAccessibilityIdentification", "startAnimating"]
 - !private ["PSo29UIAccessibilityIdentification", "stopAnimating"]
+- !private ["PSo29UIAccessibilityIdentification", "taskToCancelifCellIsReused"]
 - !private ["CSo23UIActivityIndicatorView", "startAnimating"]
 - !private ["CSo23UIActivityIndicatorView", "stopAnimating"]
 - !private ["PSo12UIAppearance", "activityIndicator"]
@@ -1271,6 +1280,7 @@ depends-member:
 - !private ["PSo12UIAppearance", "setRegion"]
 - !private ["PSo12UIAppearance", "startAnimating"]
 - !private ["PSo12UIAppearance", "stopAnimating"]
+- !private ["PSo12UIAppearance", "taskToCancelifCellIsReused"]
 - !private ["PSo21UIAppearanceContainer", "CGSize"]
 - !private ["PSo21UIAppearanceContainer", "CoreDataStackManager"]
 - !private ["PSo21UIAppearanceContainer", "ImageCache"]
@@ -1334,6 +1344,7 @@ depends-member:
 - ["PSo21UIAppearanceContainer", "showOrHideLabel"]
 - !private ["PSo21UIAppearanceContainer", "startAnimating"]
 - !private ["PSo21UIAppearanceContainer", "stopAnimating"]
+- !private ["PSo21UIAppearanceContainer", "taskToCancelifCellIsReused"]
 - ["PSo21UIAppearanceContainer", "totalLoaded"]
 - ["PSo21UIAppearanceContainer", "updatedIndexPaths"]
 - ["PSo21UIAppearanceContainer", "viewDidLoad"]
@@ -1343,6 +1354,7 @@ depends-member:
 - !private ["CSo8UIButton", "enabled"]
 - !private ["CSo24UICollectionReusableView", "activityIndicator"]
 - !private ["CSo24UICollectionReusableView", "photo"]
+- !private ["CSo24UICollectionReusableView", "taskToCancelifCellIsReused"]
 - !private ["CSo16UICollectionView", "deleteItemsAtIndexPaths"]
 - !private ["CSo16UICollectionView", "dequeueReusableCellWithReuseIdentifier"]
 - !private ["CSo16UICollectionView", "insertItemsAtIndexPaths"]
@@ -1351,6 +1363,7 @@ depends-member:
 - !private ["CSo20UICollectionViewCell", "activityIndicator"]
 - !private ["CSo20UICollectionViewCell", "deinit"]
 - !private ["CSo20UICollectionViewCell", "photo"]
+- !private ["CSo20UICollectionViewCell", "taskToCancelifCellIsReused"]
 - !private ["PSo26UICollectionViewDataSource", "CGSize"]
 - !private ["PSo26UICollectionViewDataSource", "CoreDataStackManager"]
 - !private ["PSo26UICollectionViewDataSource", "ImageCache"]
@@ -1568,6 +1581,7 @@ depends-member:
 - !private ["PSo17UICoordinateSpace", "setRegion"]
 - !private ["PSo17UICoordinateSpace", "startAnimating"]
 - !private ["PSo17UICoordinateSpace", "stopAnimating"]
+- !private ["PSo17UICoordinateSpace", "taskToCancelifCellIsReused"]
 - !private ["PSo13UIDynamicItem", "activityIndicator"]
 - !private ["PSo13UIDynamicItem", "addAnnotation"]
 - !private ["PSo13UIDynamicItem", "deleteItemsAtIndexPaths"]
@@ -1582,6 +1596,7 @@ depends-member:
 - !private ["PSo13UIDynamicItem", "setRegion"]
 - !private ["PSo13UIDynamicItem", "startAnimating"]
 - !private ["PSo13UIDynamicItem", "stopAnimating"]
+- !private ["PSo13UIDynamicItem", "taskToCancelifCellIsReused"]
 - ["VSC12UIEdgeInsets", "init"]
 - !private ["PSo18UIFocusEnvironment", "CGSize"]
 - !private ["PSo18UIFocusEnvironment", "CoreDataStackManager"]
@@ -1646,6 +1661,7 @@ depends-member:
 - ["PSo18UIFocusEnvironment", "showOrHideLabel"]
 - !private ["PSo18UIFocusEnvironment", "startAnimating"]
 - !private ["PSo18UIFocusEnvironment", "stopAnimating"]
+- !private ["PSo18UIFocusEnvironment", "taskToCancelifCellIsReused"]
 - ["PSo18UIFocusEnvironment", "totalLoaded"]
 - ["PSo18UIFocusEnvironment", "updatedIndexPaths"]
 - ["PSo18UIFocusEnvironment", "viewDidLoad"]
@@ -1736,6 +1752,7 @@ depends-member:
 - ["CSo11UIResponder", "showOrHideLabel"]
 - !private ["CSo11UIResponder", "startAnimating"]
 - !private ["CSo11UIResponder", "stopAnimating"]
+- !private ["CSo11UIResponder", "taskToCancelifCellIsReused"]
 - ["CSo11UIResponder", "totalLoaded"]
 - ["CSo11UIResponder", "updatedIndexPaths"]
 - ["CSo11UIResponder", "viewDidLoad"]
@@ -1913,6 +1930,7 @@ depends-member:
 - ["PSo18UITraitEnvironment", "showOrHideLabel"]
 - !private ["PSo18UITraitEnvironment", "startAnimating"]
 - !private ["PSo18UITraitEnvironment", "stopAnimating"]
+- !private ["PSo18UITraitEnvironment", "taskToCancelifCellIsReused"]
 - ["PSo18UITraitEnvironment", "totalLoaded"]
 - ["PSo18UITraitEnvironment", "updatedIndexPaths"]
 - ["PSo18UITraitEnvironment", "viewDidLoad"]
@@ -1933,6 +1951,7 @@ depends-member:
 - !private ["CSo6UIView", "setRegion"]
 - !private ["CSo6UIView", "startAnimating"]
 - !private ["CSo6UIView", "stopAnimating"]
+- !private ["CSo6UIView", "taskToCancelifCellIsReused"]
 - ["CSo16UIViewController", "AnyObject"]
 - ["CSo16UIViewController", "Bool"]
 - ["CSo16UIViewController", "CGFloat"]
@@ -2096,6 +2115,7 @@ depends-member:
 - !private ["PSs12_Reflectable", "startAnimating"]
 - !private ["PSs12_Reflectable", "stopAnimating"]
 - !private ["PSs12_Reflectable", "subscript"]
+- !private ["PSs12_Reflectable", "taskToCancelifCellIsReused"]
 - !private ["PSs18_SignedIntegerType", "Distance"]
 - !private ["PSs18_SignedIntegerType", "IntegerLiteralType"]
 - !private ["PSs18_SignedIntegerType", "Stride"]

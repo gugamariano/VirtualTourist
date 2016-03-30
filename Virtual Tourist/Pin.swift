@@ -44,7 +44,6 @@
         
         func deletePhotos() -> Void{
             
-            print("total \(photos?.count)")
             for photo in photos!  {
                 
                 if let p=photo as? Photo{
@@ -81,8 +80,6 @@
                 
                 VirtualTouristClient.sharedInstance().searchByLatLon(p, coordinate: cord,completionHandler: { (data) -> Void in
                     
-                    
-                    
                     if let photoData = data!["photos"] as? [String: AnyObject],
                         let photosFlickr = photoData["photo"] as? [AnyObject]
                     {
@@ -97,8 +94,6 @@
                                     let p = Photo(dictionary: dict, context: self.managedObjectContext!)
                                     p.pin=self
                                 }
-                                
-                                
                                 count++
                             }
                         
@@ -110,8 +105,6 @@
                                 }
                                 didComplete(numberFound:count)
                             }
-                        
-                        
                     }
                     
                 })

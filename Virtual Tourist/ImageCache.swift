@@ -19,32 +19,29 @@
                     
                     // MARK: Image retrieval
                     
-                    func downloadImage(imageUrl: String, didComplete: (imageData: NSData?, error: NSError?) ->  Void) -> Void {
+                    func downloadImage(imageUrl: String, didComplete: (imageData: NSData?, error: NSError?) ->  Void) -> NSURLSessionDataTask {
                         
-                        let download=dispatch_get_global_queue(QOS_CLASS_BACKGROUND,0)
-                        dispatch_async(download) {
+                        let url = NSURL(string: imageUrl)!
+                        let request = NSURLRequest(URL: url)
+                        let session = NSURLSession.sharedSession()
+                        
+                        let task = session.dataTaskWithRequest(request) {data, response, downloadError in
                             
-                            let url = NSURL(string: imageUrl)!
-                            let request = NSURLRequest(URL: url)
-                            let session = NSURLSession.sharedSession()
-                            
-                            let task = session.dataTaskWithRequest(request) {data, response, downloadError in
-                                
-                                dispatch_async(dispatch_get_main_queue()) {
-                                    if let error = downloadError {
-                                        print("download error for \(imageUrl)")
-                                        didComplete(imageData: nil, error: error)
-                                    } else {
-                                        didComplete(imageData: data, error: nil)
-                                    }
+                            dispatch_async(dispatch_get_main_queue()) {
+                                if let error = downloadError {
+                                    print("download error for \(imageUrl)")
+                                    didComplete(imageData: nil, error: error)
+                                } else {
+                                    didComplete(imageData: data, error: nil)
                                 }
                             }
-                            
-                            task.resume()
-                            
                         }
                         
+                        task.resume()
+                        return task
                     }
+                    
+                    
                     
                     
                     func imageWithIdentifier(identifier: String?) -> UIImage? {
@@ -83,7 +80,7 @@
                                 
                                 do {
                                     try NSFileManager.defaultManager().removeItemAtPath(path)
-                                    print("Photo removed \(identifier)")
+                                    
                                 }catch{
                                     print("Error removing item for \(identifier)")
                                 }

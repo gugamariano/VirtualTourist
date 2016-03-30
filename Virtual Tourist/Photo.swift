@@ -46,8 +46,6 @@ class Photo: NSManagedObject {
         if(save){
             do{
                 try managedObjectContext?.save()
-                
-
             }catch{
                 print ("error deleting photo \(file)")
             }
